@@ -1,0 +1,34 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:roomtemphumidity;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Room temperature and humidity status"
+  },
+  "contents": [
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "displayName": {
+        "en": "Room Temperatue"
+      },
+      "name": "roomTemp",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": [
+        "Property",
+        "RelativeHumidity"
+      ],
+      "displayName": {
+        "en": "Humidity"
+      },
+      "name": "humidity",
+      "schema": "double",
+      "unit": "percent"
+    }
+  ]
+}

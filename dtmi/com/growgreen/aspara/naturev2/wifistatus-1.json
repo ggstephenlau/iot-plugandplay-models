@@ -1,0 +1,35 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:growgreen:aspara:naturev2:wifistatus;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "WiFi status"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "wifiConnect",
+        "displayName": {
+          "en": "WiFi connect SSID"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "ip",
+        "displayName": {
+          "en": "The connected WiFi IP Address"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "rssi",
+        "displayName": {
+          "en": "the rssi of the connected WiFi network"
+        },
+        "schema": "string"
+      }
+    ]
+  }
+  

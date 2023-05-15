@@ -1,0 +1,78 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:growgreen:aspara:naturev2:informationproperty;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Information Property"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "manufacturer",
+        "displayName": {
+          "en": "manufacturer"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "model",
+        "displayName": {
+          "en": "Device model name"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "deviceID",
+        "displayName": {
+          "en": "Device ID"
+        },
+        "description": {
+          "en": "The device ID, e.g. GGAN-112233445566"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "macAddress",
+        "displayName": {
+          "en": "Device mac address"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "hwVersion",
+        "displayName": {
+          "en": "Device hardware version"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "fwVersion",
+        "displayName": {
+          "en": "Device firmware version"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "fwBuildDate",
+        "displayName": {
+          "en": "Device firmware build date"
+        },
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "fwBuildTime",
+        "displayName": {
+          "en": "Device firmware build time"
+        },
+        "schema": "string"
+      }
+    ]
+  }
+  

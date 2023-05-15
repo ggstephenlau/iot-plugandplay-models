@@ -1,0 +1,66 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:device;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Growgreen Aspara Nature V2"
+  },
+  "contents": [
+    {
+      "@type": "Component",
+      "name": "information",
+      "displayName": {
+        "en": "Device information component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:informationproperty;1"
+    },
+    {
+      "@type": "Component",
+      "name": "wifistatus",
+      "displayName": {
+        "en": "WiFi status component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:wifistatus;1"
+    },
+    {
+      "@type": "Component",
+      "name": "growlightstatus",
+      "displayName": {
+        "en": "Grow light component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:growlightstatus;1"
+    },
+    {
+      "@type": "Component",
+      "name": "roomtemphumiditystatus",
+      "displayName": {
+        "en": "Room temperature and humidity component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:roomtemphumidity;1"
+    },
+    {
+      "@type": "Component",
+      "name": "keystatus",
+      "displayName": {
+        "en": "key status component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:keystatus;1"
+    },
+    {
+      "@type": "Component",
+      "name": "deviceSettings",
+      "displayName": {
+        "en": "Device settings component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:devicesettings;1"
+    },
+    {
+      "@type": "Component",
+      "name": "plantingSettings",
+      "displayName": {
+        "en": "Planting settings component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:plantingsettings;1"
+    }
+  ]
+}

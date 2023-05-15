@@ -1,0 +1,111 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:plantingsettings;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Planting settings"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "planting",
+      "displayName": {
+        "en": "Planting mode"
+      },
+      "description": "The device is in planting mode or idle mode",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "programID",
+      "displayName": {
+        "en": "Planting program ID"
+      },
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "plantingID",
+      "displayName": {
+        "en": "Planting ID"
+      },
+      "schema": "string"
+    },
+    {
+      "@type": "Command",
+      "name": "startPlanting",
+      "displayName": "Start planting",
+      "description": "Start a planting with program ID and planting ID",
+      "comment": "To start a new planting with the program ID (species ID) and planting ID (e.g. \"6310064328903d09da13d87f\")",
+      "request": {
+        "name": "Parameters",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "programID",
+              "displayName": "Planting Program ID",
+              "schema": "integer"
+            },
+            {
+              "name": "plantingID",
+              "displayName": "Planting ID",
+              "schema": "string"
+            }
+          ]
+        }
+      },
+      "response": {
+        "name": "startPlantingResult",
+        "displayName": "Start Planting Result",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "result",
+              "displayName": "Result",
+              "schema": {
+                "@type": "Enum",
+                "displayName": {
+                  "en": "Start planting result enum"
+                },
+                "valueSchema": "integer",
+                "enumValues": [
+                  {
+                    "displayName": {
+                      "en": "Accept"
+                    },
+                    "enumValue": 0,
+                    "name": "accept"
+                  },
+                  {
+                    "displayName": {
+                      "en": "Already in planting"
+                    },
+                    "enumValue": 1,
+                    "name": "alreadyInPlanting"
+                  },
+                  {
+                    "displayName": {
+                      "en": "Invalid program ID"
+                    },
+                    "enumValue": 2,
+                    "name": "invalidProgramID"
+                  },
+                  {
+                    "displayName": {
+                      "en": "Invalid planting ID"
+                    },
+                    "enumValue": 3,
+                    "name": "invalidPlantingID"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+  

@@ -1,0 +1,151 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:devicesettings;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Device settings"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "name",
+      "displayName": {
+        "en": "Device name"
+      },
+      "writable": true,
+      "description": "The device name which could be set by the user through aspara app",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "timezone",
+      "displayName": {
+        "en": "Timezone"
+      },
+      "writable": true,
+      "description": "The timezone of the device location, e.g. GMT+8, GMT-1",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "language",
+      "displayName": {
+        "en": "Language"
+      },
+      "writable": true,
+      "description": "The Language of the device",
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "Language"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "English"
+            },
+            "enumValue": 0,
+            "name": "english"
+          },
+          {
+            "displayName": {
+              "en": "Chinese"
+            },
+            "enumValue": 1,
+            "name": "chinese"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "tempUnit",
+      "displayName": {
+        "en": "Temperature unit"
+      },
+      "writable": true,
+      "description": "The temperature unit of the device, 'C' or 'F'",
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "Temperature unit"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "degree Celsius (°C)"
+            },
+            "enumValue": 67,
+            "name": "degreeCelsius"
+          },
+          {
+            "displayName": {
+              "en": "degree Fahrenheit (°F)"
+            },
+            "enumValue": 70,
+            "name": "degreeFahrenheit"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "alert",
+      "displayName": "Find my aspara alert",
+      "description": "Ring the aspara to notify the user",
+      "request": {
+        "name": "Parameters",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "actionType",
+              "displayName": "Action type",
+              "description": "Display the device name or alert message",
+              "schema": {
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                  {
+                    "displayName": {
+                      "en": "Standard alert"
+                    },
+                    "enumValue": 0,
+                    "name": "standardalert"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "sound",
+              "displayName": "Sound",
+              "description": "Alert with sound",
+              "schema": {
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                  {
+                    "displayName": {
+                      "en": "Without sound"
+                    },
+                    "enumValue": 0,
+                    "name": "withoutsound"
+                  },
+                  {
+                    "displayName": {
+                      "en": "With sound"
+                    },
+                    "enumValue": 1,
+                    "name": "withsound"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:growgreen:aspara:naturev2:growlightstatus;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Grow light status"
+    },
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "growlightMode",
+        "displayName": {
+          "en": "Grow light mode"
+        },
+        "schema": {
+            "@type": "Enum",
+            "displayName": {
+              "en": "mode"
+            },
+            "valueSchema": "integer",
+            "enumValues": [
+              {
+                "displayName": {
+                  "en": "Off"
+                },
+                "enumValue": 0,
+                "name": "off"
+              },
+              {
+                "displayName": {
+                  "en": "Dim"
+                },
+                "enumValue": 1,
+                "name": "dim"
+              },
+              {
+                "displayName": {
+                  "en": "Auto"
+                },
+                "enumValue": 2,
+                "name": "auto"
+              },
+              {
+                "displayName": {
+                  "en": "Photo"
+                },
+                "enumValue": 3,
+                "name": "photo"
+              },
+              {
+                "displayName": {
+                  "en": "Demo"
+                },
+                "enumValue": 4,
+                "name": "demo"
+              }
+            ]
+        }
+      },
+      {
+        "@type": "Property",
+        "name": "ledIntensity",
+        "displayName": {
+          "en": "Red Blue White light intensity"
+        },
+        "schema": {
+          "@type": "Object",
+          "displayName": "red/blue/white values",
+          "fields": [
+            {
+              "name": "r",
+              "schema": "integer"
+            },
+            {
+              "name": "b",
+              "schema": "integer"
+            },
+            {
+              "name": "w",
+              "schema": "integer"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Property",
+        "name": "growlightDimIntensity",
+        "displayName": {
+          "en": "Grow light dim intensity"
+        },
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "growlightDimTimeout",
+        "displayName": {
+          "en": "Grow light dim timeout"
+        },
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "growlightPhotoIntensity",
+        "displayName": {
+          "en": "Grow light photo period intensity"
+        },
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "growlightPhotoTimeout",
+        "displayName": {
+          "en": "Grow light dim timeout"
+        },
+        "schema": "integer"
+      }
+    ]
+}
