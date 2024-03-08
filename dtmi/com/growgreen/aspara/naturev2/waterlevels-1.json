@@ -1,0 +1,34 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:growgreen:aspara:naturev2:waterlevels;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Water high/low level detection"
+    },
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "enable",
+            "displayName": {
+              "en": "Water level detection enable"
+            },
+            "schema": "boolean"
+        },
+        {
+            "@type": "Property",
+            "name": "high",
+            "displayName": {
+              "en": "Water level high"
+            },
+            "schema": "boolean"
+        },
+        {
+            "@type": "Property",
+            "name": "low",
+            "displayName": {
+              "en": "Water level low"
+            },
+            "schema": "boolean"
+        }
+    ]
+}

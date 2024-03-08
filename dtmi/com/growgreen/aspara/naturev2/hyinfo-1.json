@@ -1,0 +1,90 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:hyinfo;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "HY information"
+  },
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "datetime",
+      "displayName": {
+        "en": "Datetime"
+      },
+      "schema": "dateTime"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "stage",
+      "displayName": {
+        "en": "HY stages"
+      },
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "HY Stages"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "HY Stop"
+            },
+            "enumValue": 0,
+            "name": "hyStop"
+          },
+          {
+            "displayName": {
+              "en": "HY tank to growtray"
+            },
+            "enumValue": 1,
+            "name": "hyRv2Gt"
+          },
+          {
+            "displayName": {
+              "en": "HY tank to growtray end"
+            },
+            "enumValue": 2,
+            "name": "hyRv2GtEnd"
+          },
+          {
+            "displayName": {
+              "en": "HY growtray to tank"
+            },
+            "enumValue": 3,
+            "name": "hyGt2Rv"
+          },
+          {
+            "displayName": {
+              "en": "HY growtray to tank end"
+            },
+            "enumValue": 4,
+            "name": "hyGt2RvEnd"
+          },
+          {
+            "displayName": {
+              "en": "Pre EC"
+            },
+            "enumValue": 5,
+            "name": "preEc"
+          },
+          {
+            "displayName": {
+              "en": "EC"
+            },
+            "enumValue": 6,
+            "name": "ec"
+          },
+          {
+            "displayName": {
+              "en": "EC end"
+            },
+            "enumValue": 7,
+            "name": "ecEnd"
+          }
+        ]
+      }
+    }
+  ]
+}

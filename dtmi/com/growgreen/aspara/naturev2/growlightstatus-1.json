@@ -8,7 +8,8 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "growlightMode",
+        "name": "mode",
+        "writable": true,
         "displayName": {
           "en": "Grow light mode"
         },
@@ -46,20 +47,13 @@
                 },
                 "enumValue": 3,
                 "name": "photo"
-              },
-              {
-                "displayName": {
-                  "en": "Demo"
-                },
-                "enumValue": 4,
-                "name": "demo"
               }
             ]
         }
       },
       {
         "@type": "Property",
-        "name": "ledIntensity",
+        "name": "leds",
         "displayName": {
           "en": "Red Blue White light intensity"
         },
@@ -84,7 +78,8 @@
       },
       {
         "@type": "Property",
-        "name": "growlightDimIntensity",
+        "name": "dimIntensity",
+        "writable": true,
         "displayName": {
           "en": "Grow light dim intensity"
         },
@@ -92,7 +87,8 @@
       },
       {
         "@type": "Property",
-        "name": "growlightDimTimeout",
+        "name": "dimTimeout",
+        "writable": true,
         "displayName": {
           "en": "Grow light dim timeout"
         },
@@ -100,7 +96,8 @@
       },
       {
         "@type": "Property",
-        "name": "growlightPhotoIntensity",
+        "name": "photoIntensity",
+        "writable": true,
         "displayName": {
           "en": "Grow light photo period intensity"
         },
@@ -108,7 +105,8 @@
       },
       {
         "@type": "Property",
-        "name": "growlightPhotoTimeout",
+        "name": "photoTimeout",
+        "writable": true,
         "displayName": {
           "en": "Grow light dim timeout"
         },

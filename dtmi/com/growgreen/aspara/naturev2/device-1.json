@@ -48,6 +48,54 @@
     },
     {
       "@type": "Component",
+      "name": "growtray",
+      "displayName": {
+        "en": "Growtray"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:growtray;1"
+    },
+    {
+      "@type": "Component",
+      "name": "watertank",
+      "displayName": {
+        "en": "Water tankr"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:watertank;1"
+    },
+    {
+      "@type": "Component",
+      "name": "waterlevels",
+      "displayName": {
+        "en": "Water high/low levels"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:waterlevels;1"
+    },
+    {
+      "@type": "Component",
+      "name": "sensingprobe",
+      "displayName": {
+        "en": "Sensing probe"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:sensingprobe;1"
+    },
+    {
+      "@type": "Component",
+      "name": "pumps",
+      "displayName": {
+        "en": "Pumps"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:pumps;1"
+    },
+    {
+      "@type": "Component",
+      "name": "hyinfo",
+      "displayName": {
+        "en": "Hy Info component"
+      },
+      "schema": "dtmi:com:growgreen:aspara:naturev2:hyinfo;1"
+    },
+    {
+      "@type": "Component",
       "name": "deviceSettings",
       "displayName": {
         "en": "Device settings component"

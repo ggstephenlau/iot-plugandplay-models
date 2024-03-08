@@ -60,35 +60,13 @@
     },
     {
       "@type": "Property",
-      "name": "tempUnit",
+      "name": "temperatureUnit",
       "displayName": {
         "en": "Temperature unit"
       },
       "writable": true,
       "description": "The temperature unit of the device, 'C' or 'F'",
-      "schema": {
-        "@type": "Enum",
-        "displayName": {
-          "en": "Temperature unit"
-        },
-        "valueSchema": "integer",
-        "enumValues": [
-          {
-            "displayName": {
-              "en": "degree Celsius (°C)"
-            },
-            "enumValue": 67,
-            "name": "degreeCelsius"
-          },
-          {
-            "displayName": {
-              "en": "degree Fahrenheit (°F)"
-            },
-            "enumValue": 70,
-            "name": "degreeFahrenheit"
-          }
-        ]
-      }
+      "schema": "string"
     },
     {
       "@type": "Command",
@@ -96,6 +74,7 @@
       "displayName": "Find my aspara alert",
       "description": "Ring the aspara to notify the user",
       "request": {
+        "@type": "CommandPayload",
         "name": "Parameters",
         "schema": {
           "@type": "Object",
@@ -145,6 +124,11 @@
             }
           ]
         }
+      },
+      "response": {
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
       }
     }
   ]

@@ -1,0 +1,161 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:sensingprobe;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Sensing Probe"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "status",
+      "displayName": {
+        "en": "The status of the sensing probe"
+      },
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "Status"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "Power off"
+            },
+            "enumValue": 0,
+            "name": "poweroff"
+          },
+          {
+            "displayName": {
+              "en": "Switching off"
+            },
+            "enumValue": 1,
+            "name": "switchingoff"
+          },
+          {
+            "displayName": {
+              "en": "Power on"
+            },
+            "enumValue": 2,
+            "name": "poweron"
+          },
+          {
+            "displayName": {
+              "en": "Sensing water level"
+            },
+            "enumValue": 3,
+            "name": "sensingwater"
+          },
+          {
+            "displayName": {
+              "en": "Sensing EC"
+            },
+            "enumValue": 4,
+            "name": "sensingec"
+          },
+          {
+            "displayName": {
+              "en": "Communication error"
+            },
+            "enumValue": 5,
+            "name": "commerror"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "wlevel",
+      "displayName": {
+        "en": "The water level"
+      },
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "Water level"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "invalid"
+            },
+            "enumValue": -1,
+            "name": "wlvlinvalid"
+          },
+          {
+            "displayName": {
+              "en": "0 ml"
+            },
+            "enumValue": 0,
+            "name": "wlvl0"
+          },
+          {
+            "displayName": {
+              "en": "300 ml"
+            },
+            "enumValue": 300,
+            "name": "wlvl300"
+          },
+          {
+            "displayName": {
+              "en": "700 ml"
+            },
+            "enumValue": 700,
+            "name": "wlvl700"
+          },
+          {
+            "displayName": {
+              "en": "1100 ml"
+            },
+            "enumValue": 1100,
+            "name": "wlvl1100"
+          },
+          {
+            "displayName": {
+              "en": "1550 ml"
+            },
+            "enumValue": 1550,
+            "name": "wlvl1550"
+          },
+          {
+            "displayName": {
+              "en": "2000 ml"
+            },
+            "enumValue": 2000,
+            "name": "wlvl2000"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "ec",
+      "displayName": {
+        "en": "The measured EC value"
+      },
+      "schema": "integer"
+    },
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "displayName": {
+        "en": "Water temperatue"
+      },
+      "name": "waterTemp",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": "Property",
+      "name": "version",
+      "displayName": {
+        "en": "The version of the sensing probe"
+      },
+      "schema": "string"
+    }
+  ]
+}

@@ -17,93 +17,217 @@
     },
     {
       "@type": "Property",
-      "name": "programID",
+      "name": "availablePlantingProgramIds",
       "displayName": {
-        "en": "Planting program ID"
+        "en": "Available planting program IDs"
       },
-      "schema": "integer"
+      "description": "The list of availabe planting program IDs",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "id1",
+            "schema": "string"
+          },
+          {
+            "name": "id2",
+            "schema": "string"
+          },
+          {
+            "name": "id3",
+            "schema": "string"
+          },
+          {
+            "name": "id4",
+            "schema": "string"
+          },
+          {
+            "name": "id5",
+            "schema": "string"
+          },
+          {
+            "name": "id6",
+            "schema": "string"
+          }
+        ]
+      }
     },
     {
       "@type": "Property",
-      "name": "plantingID",
+      "name": "plantingProgramId",
       "displayName": {
-        "en": "Planting ID"
+        "en": "Planting program ID"
       },
+      "description": "The current planting program name, e.g. \"OFF0001\"",
       "schema": "string"
     },
     {
+      "@type": "Property",
+      "name": "plantingId",
+      "displayName": {
+        "en": "Planting ID"
+      },
+      "description": "The current unique planting ID, e.g. \"65a4f4e24792c1f610946d1c\"",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "startPlantingTs",
+      "displayName": {
+        "en": "start planting timestamp"
+      },
+      "description": "The actual start planting timestamp e.g. 1705378153 \"Tuesday, 16 January 2024 04:09:13\"",
+      "schema": "long"
+    },
+    {
+      "@type": "Property",
+      "name": "plantingTs",
+      "displayName": {
+        "en": "planting timestamp"
+      },
+      "description": "The resaultant of offseted planting timestamp e.g. 1705205353 \"Sunday, 14 January 2024 04:09:13\"",
+      "schema": "long"
+    },
+    {
       "@type": "Command",
-      "name": "startPlanting",
-      "displayName": "Start planting",
-      "description": "Start a planting with program ID and planting ID",
-      "comment": "To start a new planting with the program ID (species ID) and planting ID (e.g. \"6310064328903d09da13d87f\")",
+      "name": "getAvailablePlantingProgramIds",
+      "displayName": "get availabe planting program IDs",
+      "description": "Get the available planting program IDs, which could be use for start planting",
+      "response": {
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "loadPlantingProgram",
+      "displayName": "load the planting program to the device",
+      "description": "Load the planting program of the planting program ID to the device",
       "request": {
-        "name": "Parameters",
+        "@type": "CommandPayload",
+        "name": "loadPlaningProgramParameters",
         "schema": {
           "@type": "Object",
           "fields": [
             {
-              "name": "programID",
+              "name": "plantingProgramId",
               "displayName": "Planting Program ID",
-              "schema": "integer"
-            },
-            {
-              "name": "plantingID",
-              "displayName": "Planting ID",
               "schema": "string"
             }
           ]
         }
       },
       "response": {
-        "name": "startPlantingResult",
-        "displayName": "Start Planting Result",
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "startPlanting",
+      "displayName": "Start planting",
+      "description": "Start a planting with planting program ID, planting ID, start planting timestamp, and platning timestamp",
+      "request": {
+        "@type": "CommandPayload",
+        "name": "startPlaningParameters",
         "schema": {
           "@type": "Object",
           "fields": [
             {
-              "name": "result",
-              "displayName": "Result",
-              "schema": {
-                "@type": "Enum",
-                "displayName": {
-                  "en": "Start planting result enum"
-                },
-                "valueSchema": "integer",
-                "enumValues": [
-                  {
-                    "displayName": {
-                      "en": "Accept"
-                    },
-                    "enumValue": 0,
-                    "name": "accept"
-                  },
-                  {
-                    "displayName": {
-                      "en": "Already in planting"
-                    },
-                    "enumValue": 1,
-                    "name": "alreadyInPlanting"
-                  },
-                  {
-                    "displayName": {
-                      "en": "Invalid program ID"
-                    },
-                    "enumValue": 2,
-                    "name": "invalidProgramID"
-                  },
-                  {
-                    "displayName": {
-                      "en": "Invalid planting ID"
-                    },
-                    "enumValue": 3,
-                    "name": "invalidPlantingID"
-                  }
-                ]
-              }
+              "name": "plantingProgramId",
+              "displayName": "Planting Program ID",
+              "schema": "string"
+            },
+            {
+              "name": "plantingId",
+              "displayName": "Planting ID",
+              "schema": "string"
+            },
+            {
+              "name": "startPlantingTs",
+              "displayName": "start planting timestamp",
+              "schema": "long"
+            },
+            {
+              "name": "plantingTs",
+              "displayName": "planting timestamp",
+              "schema": "long"
             }
           ]
         }
+      },
+      "response": {
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "finishPlanting",
+      "displayName": "Finish planting",
+      "description": "Finish the current planting",
+      "response": {
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "changePlantingProgram",
+      "displayName": "Change the current planting program",
+      "description": "Change the current planting program on the fly",
+      "request": {
+        "@type": "CommandPayload",
+        "name": "changePlantingProgramParameters",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "plantingProgramId",
+              "displayName": "Planting Program ID",
+              "schema": "string"
+            }
+          ]
+        }
+      },
+      "response": {
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "changePlantingTimestamps",
+      "displayName": "Change the current planting timestamps",
+      "description": "Change the current planting timestamps on the fly",
+      "request": {
+        "@type": "CommandPayload",
+        "name": "changePlantingTimestampParameters",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "startPlantingTs",
+              "displayName": "start planting timestamp",
+              "schema": "long"
+            },
+            {
+              "name": "plantingTs",
+              "displayName": "planting timestamp",
+              "schema": "long"
+            }
+          ]
+        }
+      },
+      "response": {
+        "@type": "CommandPayload",
+        "name": "response",
+        "schema": "string"
       }
     }
   ]

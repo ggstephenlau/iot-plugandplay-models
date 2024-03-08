@@ -1,0 +1,98 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:com:growgreen:aspara:naturev2:pumps;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Pumps"
+  },
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "upspeed",
+      "displayName": {
+        "en": "Up pump speed"
+      },
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "speed"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "off"
+            },
+            "enumValue": 0,
+            "name": "Off"
+          },
+          {
+            "displayName": {
+              "en": "slow"
+            },
+            "enumValue": 1,
+            "name": "Slow"
+          },
+          {
+            "displayName": {
+              "en": "medium"
+            },
+            "enumValue": 2,
+            "name": "Medium"
+          },
+          {
+            "displayName": {
+              "en": "fast"
+            },
+            "enumValue": 3,
+            "name": "Fast"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "downspeed",
+      "displayName": {
+        "en": "Down pump speed"
+      },
+      "schema": {
+        "@type": "Enum",
+        "displayName": {
+          "en": "speed"
+        },
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "off"
+            },
+            "enumValue": 0,
+            "name": "Off"
+          },
+          {
+            "displayName": {
+              "en": "slow"
+            },
+            "enumValue": 1,
+            "name": "Slow"
+          },
+          {
+            "displayName": {
+              "en": "medium"
+            },
+            "enumValue": 2,
+            "name": "Medium"
+          },
+          {
+            "displayName": {
+              "en": "fast"
+            },
+            "enumValue": 3,
+            "name": "Fast"
+          }
+        ]
+      }
+    }
+  ]
+}
