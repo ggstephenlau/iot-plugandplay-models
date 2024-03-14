@@ -10,10 +10,38 @@
       "@type": "Property",
       "name": "planting",
       "displayName": {
-        "en": "Planting mode"
+        "en": "Planting status"
       },
-      "description": "The device is in planting mode or idle mode",
+      "description": "The device is in planting or idle",
       "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "plantingMode",
+      "displayName": {
+        "en": "Planting Mode"
+      },
+      "description": "The current planting is offline or online",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "integer",
+        "enumValues": [
+          {
+            "displayName": {
+              "en": "Offline Planting"
+            },
+            "enumValue": 0,
+            "name": "offlineplantingmode"
+          },
+          {
+            "displayName": {
+              "en": "Online Planting"
+            },
+            "enumValue": 1,
+            "name": "onlineplantingmode"
+          }
+        ]
+      }
     },
     {
       "@type": "Property",
@@ -86,6 +114,16 @@
         "en": "planting timestamp"
       },
       "description": "The resaultant of offseted planting timestamp e.g. 1705205353 \"Sunday, 14 January 2024 04:09:13\"",
+      "schema": "long"
+    },
+    {
+      "@type": "Property",
+      "name": "sunriseTs",
+      "displayName": {
+        "en": "sunrise timestamp"
+      },
+      "writable": true,
+      "description": "The sunrise time stamp (0 - 86400, 00:00 - 23:59) of the current planting, e.g. 21600 = 6:00am",
       "schema": "long"
     },
     {
