@@ -72,6 +72,10 @@
             {
               "name": "w",
               "schema": "integer"
+            },
+            {
+              "name": "ppfd",
+              "schema": "integer"
             }
           ]
         }
