@@ -128,17 +128,6 @@
     },
     {
       "@type": "Command",
-      "name": "getAvailablePlantingProgramIds",
-      "displayName": "get availabe planting program IDs",
-      "description": "Get the available planting program IDs, which could be use for start planting",
-      "response": {
-        "@type": "CommandPayload",
-        "name": "response",
-        "schema": "string"
-      }
-    },
-    {
-      "@type": "Command",
       "name": "loadPlantingProgram",
       "displayName": "load the planting program to the device",
       "description": "Load the planting program of the planting program ID to the device",
