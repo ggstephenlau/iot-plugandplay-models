@@ -86,7 +86,7 @@
       "displayName": {
         "en": "Planting program ID"
       },
-      "description": "The current planting program name, e.g. \"OFF0001\"",
+      "description": "The current planting program name, e.g. \"STND001\"",
       "schema": "string"
     },
     {
