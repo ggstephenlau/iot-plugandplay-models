@@ -86,7 +86,7 @@
       "displayName": {
         "en": "Planting program ID"
       },
-      "description": "The current planting program name, e.g. \"STND001\"",
+      "description": "The current planting program name, e.g. \"KLU0001\"",
       "schema": "string"
     },
     {
@@ -113,6 +113,7 @@
       "displayName": {
         "en": "planting timestamp"
       },
+      "writable": true,
       "description": "The resaultant of offseted planting timestamp e.g. 1705205353 \"Sunday, 14 January 2024 04:09:13\"",
       "schema": "long"
     },
@@ -217,36 +218,6 @@
               "name": "plantingProgramId",
               "displayName": "Planting Program ID",
               "schema": "string"
-            }
-          ]
-        }
-      },
-      "response": {
-        "@type": "CommandPayload",
-        "name": "response",
-        "schema": "string"
-      }
-    },
-    {
-      "@type": "Command",
-      "name": "changePlantingTimestamps",
-      "displayName": "Change the current planting timestamps",
-      "description": "Change the current planting timestamps on the fly",
-      "request": {
-        "@type": "CommandPayload",
-        "name": "changePlantingTimestampParameters",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "startPlantingTs",
-              "displayName": "start planting timestamp",
-              "schema": "long"
-            },
-            {
-              "name": "plantingTs",
-              "displayName": "planting timestamp",
-              "schema": "long"
             }
           ]
         }
